@@ -1,0 +1,14 @@
+[user]
+	name = Rahmat Ramadhan Irianto
+	email = rahmat.ramadhaniriyanto@gmail.com
+
+[core]
+	editor = nano
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = "code --wait "
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = "code --wait --diff  "
