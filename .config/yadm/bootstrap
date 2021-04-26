@@ -1,0 +1,97 @@
+#!/bin/sh
+
+cd $HOME
+
+### Machine portable detect ###
+getMachine () {
+    local unameOut="$(uname -s)"
+    case "${unameOut}" in
+        Linux*)     local machine=linux;;
+        Darwin*)    local machine=darwin;;
+        CYGWIN*)    local machine=cygwin;;
+        MINGW*)     local machine=minGw;;
+        *)          local machine="UNKNOWN:${unameOut}"
+    esac
+    echo "$machine"
+}
+isMachine () {
+  if [ $(getMachine) = $1 ];then
+    return 0;
+  fi
+  return 1;
+}
+### Machine portable detect ###
+wantTo () {
+ read -p "Do you want to bootstrap $1? [Y/n] " response
+ case $response in [yY][eE][sS]|[yY]|[jJ]|'') 
+     return 0;
+     ;;
+     *)
+     echo "cancelled"
+     return 1;
+     ;;
+ esac
+}
+### Tools ###
+bootstrap_essentials () {
+  local deps="bat tmux neofetch ripgrep fzf"
+
+  isMachine "linux" && \
+    sudo pacman -Sy $deps
+
+  isMachine "darwin" && {
+    brew tap homebrew/cask
+    brew tap homebrew/cask-fonts
+    brew install \
+      $deps \
+      gpg \
+      nvim \
+      coreutils \
+      pinentry-mac \
+      iterm2 \
+      authy \
+      discord \
+      slack \
+      font-fira-code-nerd-font \
+      font-jetbrains-mono-nerd-font
+  }
+}
+bootstrap_VIM () {
+  if command -v vim >/dev/null 2>&1; then
+    echo "Bootstraping Vim"
+    vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+  fi
+}
+bootstrap_AUR () { 
+  if command -v pacaur >/dev/null 2>&1; then
+    echo "Bootstraping Pacaur"
+    local AUR=/tmp/pacaur
+    git clone https://aur.archlinux.org/pacaur.git $AUR
+    cd $AUR
+    makepkg -si
+  fi
+}
+bootstrap_Homebrew () {
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing homebrew"
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
+  fi
+
+  if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating homebrew bundle"
+    brew bundle --global
+  fi
+}
+### Tools ###
+### When is Linux based ###
+if isMachine "linux"; then
+  wantTo "AUR" && bootstrap_AUR
+  wantTo "Essentials Install" && bootstrap_essentials
+  wantTo "VIM" && bootstrap_VIM
+fi
+### When is Darwin based ###
+if isMachine "darwin"; then
+  wantTo "HOMEBREW" && bootstrap_Homebrew 
+  wantTo "Essentials Install" && bootstrap_essentials
+  wantTo "VIM" && bootstrap_VIM
+fi

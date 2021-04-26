@@ -1,0 +1,6 @@
+.ssh/id_rsa*
+.zsh_history
+.config/glab-cli/config.yml
+.config/stripe/config.toml
+.config/sourcery
+.config/sanity/config.json
