@@ -5,3 +5,5 @@
 .config/sourcery
 .config/sanity/config.json
 .secret-key/
+.password-store/
+.aws/
