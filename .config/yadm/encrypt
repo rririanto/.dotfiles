@@ -4,3 +4,4 @@
 .config/stripe/config.toml
 .config/sourcery
 .config/sanity/config.json
+.secret-key/
