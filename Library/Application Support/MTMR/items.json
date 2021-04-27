@@ -15,6 +15,15 @@
     }
   },
   {
+    "type": "staticButton",
+    "title": "🚀",
+    "action": "keyPress",
+    "keycode": 131,
+    "bordered": true,
+    "width": 43,
+    "align": "left"
+  },
+  {
     "type": "dock",
     "align": "right",
     "width": 300
@@ -23,8 +32,8 @@
     "type": "group",
     "align": "right",
     "bordered": false,
-    "title": "Media",
-    "width": 60,
+    "title": "🎸",
+    "width": 40,
     "items": [{
         "type": "close",
         "bordered": false,
@@ -87,8 +96,6 @@
         "type": "appleScriptTitledButton",
         "source": {
           "inline": "if application \"Google Chrome\" is running then\r\ttell application \"Google Chrome\"\r\t\trepeat with t in tabs of windows\r\t\t\ttell t\r\t\t\t\tif URL starts with \"https://music.youtube.com\" or URL starts with \"http://music.youtube.com\" then\r\t\t\t\t\ttry\r\t\t\t\t\t\tlocal groupName, trackName, timeTrack, response\r\t\t\t\t\t\tset response to \"\"\r\t\t\t\t\t\tset groupName to  execute JavaScript \"document.getElementsByClassName('byline ytmusic-player-bar')[0]?.firstChild.innerText || ''\"\r\t\t\t\t\t\tset trackName to  execute JavaScript \"document.getElementsByClassName('title ytmusic-player-bar')[0]?.innerText|| ''\"\r\t\t\t\t\t\t\r\t\t\t\t\t\tif groupName is not equal to \"\" then\r\t\t\t\t\t\t\tset response to response & groupName\r\t\t\t\t\t\tend if\r\t\t\t\t\t\t\r\t\t\t\t\t\tif trackName is not equal to \"\" then\r\t\t\t\t\t\t\tif response is not equal to \"\" then\r\t\t\t\t\t\t\t\tset response to response & \" - \" & trackName\r\t\t\t\t\t\t\telse\r\t\t\t\t\t\t\t\tset response to response & trackName\r\t\t\t\t\t\t\tend if\r\t\t\t\t\t\tend if\r\t\t\t\t\t\t\r\t\t\t\t\t\tif response is equal to \"\" then return \"...........................\"\r\t\t\t\t\t\treturn response\r\t\t\t\t\ton error errorMsg\r\t\t\t\t\t\treturn errorMsg\r\t\t\t\t\tend try\r\t\t\t\tend if\r\t\t\tend tell\r\t\tend repeat\r\tend tell\rend if\rreturn \"Open YouTube Music\""
-
-          // "inline": "if application \"Google Chrome\" is running then\r\ttell application \"Google Chrome\"\r\t\trepeat with t in tabs of windows\r\t\t\ttell t\r\t\t\t\tif URL starts with \"https://music.youtube.com\" or URL starts with \"http://music.youtube.com\" then\r\t\t\t\t\ttry\r\t\t\t\t\t\tlocal groupName, trackName, timeTrack, response\r\t\t\t\t\t\tset response to \"\"\r\t\t\t\t\t\tset groupName to  execute JavaScript \"document.getElementsByClassName('byline ytmusic-player-bar')[0]?.firstChild.innerText || ''\"\r\t\t\t\t\t\tset trackName to  execute JavaScript \"document.getElementsByClassName('title ytmusic-player-bar')[0]?.innerText|| ''\"\r\t\t\t\t\t\tset timeTrack to  execute JavaScript \"document.getElementsByClassName('time-info ytmusic-player-bar')[0]?.innerText|| ''\"\r\t\t\t\t\t\t\r\t\t\t\t\t\tif timeTrack is not equal to \"\" then\r\t\t\t\t\t\t\tset response to response & \"(\" & timeTrack & \") \"\r\t\t\t\t\t\tend if\r\t\t\t\t\t\t\r\t\t\t\t\t\tif groupName is not equal to \"\" then\r\t\t\t\t\t\t\tset response to response & groupName\r\t\t\t\t\t\tend if\r\t\t\t\t\t\t\r\t\t\t\t\t\tif trackName is not equal to \"\" then\r\t\t\t\t\t\t\tif response is not equal to \"\" then\r\t\t\t\t\t\t\t\tset response to response & \" - \" & trackName\r\t\t\t\t\t\t\telse\r\t\t\t\t\t\t\t\tset response to response & trackName\r\t\t\t\t\t\t\tend if\r\t\t\t\t\t\tend if\r\t\t\t\t\t\t\r\t\t\t\t\t\tif response is equal to \"\" then return \"...........................\"\r\t\t\t\t\t\treturn response\r\t\t\t\t\ton error errorMsg\r\t\t\t\t\t\treturn errorMsg\r\t\t\t\t\tend try\r\t\t\t\tend if\r\t\t\tend tell\r\t\tend repeat\r\tend tell\rend if\rreturn \"Open YouTube Music\""
         },
         "action": "appleScript",
         "actionAppleScript": {
@@ -120,7 +127,7 @@
     "type": "group",
     "align": "right",
     "bordered": false,
-    "title": "$$",
+    "title": "💸",
     "width": 40,
     "items": [{
         "type": "close",
@@ -157,8 +164,8 @@
     "type": "group",
     "align": "right",
     "bordered": false,
-    "title": "Info",
-    "width": 44,
+    "title": "👁",
+    "width": 40,
     "items": [{
         "type": "close",
         "bordered": false,
@@ -223,8 +230,8 @@
         "type": "pomodoro",
         "align": "right",
         "bordered": false,
-        "workTime": 1200, // set time work in seconds. Default 1500 (25 min)
-        "restTime": 600 // set time rest in seconds. Default 300 (5 min)
+        "workTime": 1200,
+        "restTime": 600
       },
       {
         "type": "battery",
@@ -242,7 +249,8 @@
   {
     "type": "group",
     "align": "right",
-    "title": "World",
+    "title": "🌍",
+    "width": 40,
     "items": [{
         "type": "escape",
         "title": "Esc",
