@@ -369,7 +369,7 @@
         "width": 160,
         "bordered": true,
         "align": "right"
-      },
+      }
     ]
   },
   {
@@ -392,5 +392,5 @@
     "formatTemplate": "HH:mm",
     "width": 45,
     "align": "right"
-  },
+  }
 ]
