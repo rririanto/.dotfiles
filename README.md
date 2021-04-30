@@ -14,6 +14,7 @@
 |                     | Firefox       | ✅    |
 |                     | Safari        | ✅    |
 | Touchbar            | MTMR          | ✅    |
+| Misc                | Unshaky       | ✅    |
 
 # [WIP]
 - README
