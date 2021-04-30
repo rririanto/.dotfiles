@@ -7,7 +7,7 @@
 | Shell               | zsh           | ✅    |
 | Multiplexer         | tmux          | ✅    |
 | Editor              | vim/neovim    | ✅    |
-| Terminal            | iTerm2        | ✅    |
+| Terminal            | Alacritty     | ✅    |
 |                     | iTerm2        | ✅    |
 | Mail                | Mail          | ✅    |
 | Browser             | Chrome        | ✅    |
