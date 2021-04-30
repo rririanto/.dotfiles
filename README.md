@@ -13,6 +13,7 @@
 | Browser             | Chrome        | ✅    |
 |                     | Firefox       | ✅    |
 |                     | Safari        | ✅    |
+| Touchbar            | MTMR          | ✅    |
 
 # [WIP]
 - README
