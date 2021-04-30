@@ -56,10 +56,10 @@ autoload -Uz _zinit
 # zt() : First argument is a wait time and suffix, ie "0a". Anything that doesn't match will be passed as if it were an ice mod. Default ices depth'3' and lucid
 # zct(): First argument provides $MYPROMPT value used in load'' and unload'' ices. Sources a config file with tracking for easy unloading using $MYPROMPT value. Small hack to function in for-syntax
 zt()  { zinit depth'3' lucid ${1/#[0-9][a-c]/wait"$1"} "${@:2}"; }
-zct() { .zinit-ice load"[[ \${MYPROMPT} = ${1} ]]" unload"[[ \${MYPROMPT} != ${1} ]]" \
-        atinit'![ -f "${thmf}/${MYPROMPT}-pre" ] && source "${thmf}/${MYPROMPT}-pre"' \
-        atload'![ -f "${thmf}/${MYPROMPT}-post" ] && source "${thmf}/${MYPROMPT}-post"'; \
-        ZINIT_ICE+=("${(kv)ZINIT_ICES[@]}"); ___turbo=1;}
+#zct() { .zinit-ice load"[[ \${MYPROMPT} = ${1} ]]" unload"[[ \${MYPROMPT} != ${1} ]]" \
+#        atinit'![ -f "${thmf}/${MYPROMPT}-pre" ] && source "${thmf}/${MYPROMPT}-pre"' \
+#        atload'![ -f "${thmf}/${MYPROMPT}-post" ] && source "${thmf}/${MYPROMPT}-post"'; \
+#        ZINIT_ICE+=("${(kv)ZINIT_ICES[@]}"); ___turbo=1;}
 
 ##################
 # Initial Prompt #
@@ -148,11 +148,11 @@ zt 0c light-mode as'null' for \
     sbin \
       paulirish/git-open \
 
-zct light-mode from'gh-r' for \
-    as'program' sei40kr/fast-alias-tips-bin \
-    sei40kr/zsh-fast-alias-tips \
-    zdharma/zui \
-    zdharma/zplugin-crasis
+# zct light-mode from'gh-r' for \
+#    as'program' sei40kr/fast-alias-tips-bin \
+#    sei40kr/zsh-fast-alias-tips \
+#    zdharma/zui \
+#    zdharma/zplugin-crasis
     
 typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     taskwarrior
