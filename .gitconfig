@@ -1,14 +1,23 @@
-[user]
-	name = Rahmat Ramadhan Irianto
-	email = rahmat.ramadhaniriyanto@gmail.com
-
-[core]
-	editor = nano
-[merge]
-    tool = vscode
-[mergetool "vscode"]
-    cmd = "code --wait "
+[gpg]
+	program = gpg
+    path = .gitconfig-work
+[rerere]
+	enabled = true
+[alias]
+  # you need install vim-conflicted
+	conflicted = !vim +Conflicted
+  # use for resolve conflicted
+  accept-ours = "!f() { git checkout --ours -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+  accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f"
+[commit]
+	gpgsign = true
 [diff]
-    tool = vscode
-[difftool "vscode"]
-    cmd = "code --wait --diff  "
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[pull]
+	ff = only
+[url "git@gitlab.com:"]
+  insteadOf = https://gitlab.com/ 
