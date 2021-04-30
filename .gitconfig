@@ -1,6 +1,5 @@
 [gpg]
 	program = gpg
-    path = .gitconfig-work
 [rerere]
 	enabled = true
 [alias]
@@ -21,3 +20,7 @@
 	ff = only
 [url "git@gitlab.com:"]
   insteadOf = https://gitlab.com/ 
+[user]
+	signingkey = F23991C3500E075BE66B4266DA08484CF547B858
+	name = Rahmat Ramadhan Irianto
+	email = rahmat.ramadhaniriyanto@gmail.com
