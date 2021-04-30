@@ -3,6 +3,7 @@
 
 | *                   | Nama          | OSX   |
 |---------------------|---------------|-------|
+| Encrypt             | GPG           | ✅    |
 | Dotfiles Manager    | yadm          | ✅    |
 | Shell               | zsh           | ✅    |
 | Multiplexer         | tmux          | ✅    |
