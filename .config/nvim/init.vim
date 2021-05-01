@@ -22,11 +22,13 @@ let mapleader = ' '
 nnoremap <Leader>n :NERDTreeToggle <CR>
 nnoremap <Leader>w :w <CR>
 nnoremap <Leader>q :q <CR>
+nnoremap <Leader>q1 :q! <CR>
 nnoremap <Leader>e :e $MYVIMRC <CR>
 nnoremap <Leader>wq :wq <CR>
 nnoremap <Leader>r :source $MYVIMRC <CR>
 nnoremap <Leader>wq :wq <CR>
 nnoremap <Leader>nn :new <CR>
+nnoremap <Leader>sp :sp <CR>
 nnoremap <Leader>vs :vsp <CR>
 " Type {<Space> + o} for search file content (FZF)
 nnoremap <Leader>o :Files<CR> 
