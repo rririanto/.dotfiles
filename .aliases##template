@@ -53,6 +53,9 @@ alias ...="../../"
 alias ....="../../../"
 alias .....="../../../../"
 alias rm="rm -i"
+
+# Django Development
 alias run="python manage.py runserver --settings=config.settings.local"
 alias shell="python manage.py runserver --settings=config.settings.local"
 alias migrate="python manage.py migrate --settings=config.settings.local"
+alias suser="python manage.py createsuperuser --settings=config.settings.local"
