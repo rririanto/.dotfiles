@@ -17,10 +17,10 @@
 | Touchbar            | MTMR          | ✅    |
 | Misc                | Unshaky       | ✅    |
 
-# [WIP]
+## [WIP]
 - README
 
-# MY TOUCH BAR MY RULE
+## MY TOUCH BAR MY RULE
 
 #### Main Bar
 Esc, Launchpad Shortcut, Dock (Currently Running Apps), Music, Currencies, Monitoring Application, World Time, Battery Percentage, Time, Display Sleep.
