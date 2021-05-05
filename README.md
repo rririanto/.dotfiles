@@ -33,7 +33,7 @@ Monitor and Keyboard Brightness Preset, Audio Silent, Audio Preset, Youtube Musi
 ![Image of mtmr #2](https://github.com/rririanto/.dotfiles/blob/master/Library/Application%20Support/MTMR/Touch%20Bar%20Shot%202021-04-30%20at%2013.51.13.png)
 
 #### 💸 Currency Converter
-I only deal with 3 currency since I have client pay me on USD and EURO and also I invested on BTC. You can edit this easily. 
+I only deal with 3 currencies since I have clients pay me in USD and EURO and also I invest in BTC. You can edit this easily.
 
 ![Image of mtmr #3](https://github.com/rririanto/.dotfiles/blob/master/Library/Application%20Support/MTMR/Touch%20Bar%20Shot%202021-04-30%20at%2013.51.28.png)
 
