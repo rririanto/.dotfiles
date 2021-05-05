@@ -56,6 +56,7 @@ alias rm="rm -i"
 
 # Django Development
 alias run="python manage.py runserver --settings=config.settings.local"
-alias shell="python manage.py runserver --settings=config.settings.local"
+alias shell="python manage.py shell --settings=config.settings.local"
 alias migrate="python manage.py migrate --settings=config.settings.local"
 alias suser="python manage.py createsuperuser --settings=config.settings.local"
+alias psqlstart="/usr/local/Cellar/postgresql@12/12.6_2/bin/pg_ctl -D /usr/local/var/postgres/ start"
